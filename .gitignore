@@ -6,3 +6,4 @@ js/*
 !js/test.js
 dist/*
 css-min/*
+package-lock.json
