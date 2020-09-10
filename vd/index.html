@@ -1,0 +1,346 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vd</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/vd.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="vd.js"></script>
+</head>
+
+<body>
+
+    <div class="vd-root">
+        <div class="vd-section vd-s-1 vd-bg-img">
+            <div class="vd-container ds-f ">
+                <div class="vd-s-media">
+                    <div class="vd-s-media-img">
+                        <img src="./images/vd-tel-1.png" alt="iphone xs">
+                    </div>
+                </div>
+                <div class="vd-s-main">
+                    <div class="vd-logo">
+                        <img class="vd-logo-img" src="./images/vd-logo.svg" title="vodafone">
+                    </div>
+                    <div class="s-main-head">Переходьте на iPhone SE</div>
+                    <div class="s-main-text">З Vodafone це сила</div>
+                    <div class="cirlce-block ds-f ">
+                        <div class="vd-cirlce__big vd-cirlce">
+                            <div class="circle-price circle-price_old">&nbsp;14 499 грн &nbsp;</div>
+                            <div class="circle-price circle-price_new">11 499</div>
+                            <div class="circle-price circle-price_cur">грн</div>
+                        </div>
+                        <div class="vd-cirlce__small vd-cirlce">
+                            <div class="circle-logo vd-logo-hand">
+                            </div>
+                            <div class="circle-contract">
+                                контракт<br>на 12 мес
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vd-arrow">
+                        <div class="arrow-animation"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="vd-section vd-s-2 vd-bg-img-l">
+            <div class="vd-container ds-f ">
+                <div class="vd-s-main">
+                    <div class="vd-logo-2">
+                        <img class="vd-logo-img" src="./images/vd-logo2.svg" title="vodafone">
+                    </div>
+                    <div class="s-main-head">Найкраща камера</div>
+                    <div class="s-main-text">Ширококутна камера 12 Мп з портретним режимом, портретним освітленням,
+                        функцією
+                        «Глибина», технологією Smart HDR нового покоління і підтримкою відео 4K</div>
+                </div>
+                <div class="vd-s-media">
+                    <div class="vd-s-media-img">
+                        <img src="./images/vd-tel-1.png" alt="iphone xs">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vd-section vd-s-3">
+            <div class="vd-container ds-f ">
+                <div class="vd-s-media">
+                    <div class="vd-s-media-img">
+                        <img src="./images/vd-tel-1.png" alt="iphone xs">
+                    </div>
+                </div>
+                <div class="vd-s-main">
+                    <div class="vd-logo-3">
+                        <img class="vd-logo-img" src="./images/vd-logo3.svg" title="vodafone">
+                    </div>
+                    <div class="s-main-head">HD Retina Дисплей</div>
+                    <div class="s-main-text">Дисплей Retina HD 4,7" забезпечує яскраві і глибокі відчуття від перегляду
+                        зображення та відео.</div>
+                </div>
+            </div>
+        </div>
+        <div class="test-line-1" style="width: 100%; height: 1px;border:solid green 1px"></div>
+        <div class="vd-section vd-s-4">
+            <div class="marker timeline-trigger" style="top: 399px;position: fixed;border: 1px solid blue; z-index: 90;width: 100%;"></div>
+            <div class="vd-container ds-f-c">
+                <div class="vd-s-media">
+                    <div class="vd-s-media-img box">
+                        <img src="./images/vd-logo4.svg" alt="iphone xs">
+                    </div>
+                </div>
+                <div class="vd-s-main">
+                    <div class="s-main-head">Потужний процесор BIONIC 13</div>
+                    <div class="s-main-text"> A13 Bionic – найшвидший та потужний процесор iPhone, з системою Neural
+                        Engine 3-го покоління. Забезпечує максимальну продуктивність для додатків, ігор і фотозйомки
+                    </div>
+                </div>
+                <div class="test-line-2" style="width: 100%; height: 1px;border:solid green 1px"></div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+            <script>
+var triggerOffset = document.documentElement.clientHeight / 2;
+var sceneStart = $('.test-line-1').offset().top;
+var duration = 400;
+
+var requestId = null;
+
+gsap.set(".box", {
+  left: 0,
+  top: 2100
+});
+
+gsap.set(".vd-s-4", {
+  top: triggerOffset
+});
+
+gsap.set(".vd-s-4", {
+  top: sceneStart
+});
+
+gsap.set(".test-line-1", {
+  top: sceneStart + duration
+});
+
+// "SCROLL MAGIC"!!!
+var tl = gsap.timeline({ paused: true })
+  .set(".box", { backgroundColor: "#64dd17" ,opacity:0 }, sceneStart)
+  .to(".box", { duration: duration, rotation: 0, x: 0 ,scale: 0.5 , opacity:1}, sceneStart)
+  .set(".box", { backgroundColor: "black" })
+  
+// Only update on animation frames
+window.addEventListener("scroll", function() {
+    console.log(triggerOffset);
+  if (!requestId) {
+    requestId = requestAnimationFrame(update);
+  }
+});
+
+update();
+
+// Set timeline time to scrollTop
+function update() {
+  tl.time(window.pageYOffset + triggerOffset);
+  requestId = null;
+}
+            </script>
+        </div>
+        <div class="vd-section vd-s-5">
+            <div class="vd-container-table">
+                <div class="vd-table-title">Смотрите подробные характеристики</div>
+                <div class="vd-table-body vd-table-hide" id="vd-table-info">
+                    <!-- ****** -->
+                    <table class="vd-table">
+                        <tbody>
+                            <tr>
+                                <th class="col label"
+                                    data-description="Стандарт связи устройства оснащенный модулем GSM-сети, указывает на то, какие именно поколения передачи данных поддерживает мобильное устройство. Базовым стандартом на сегодняшний день является поколение 2G. Им оснащено большинство устройств мобильной связи, которого достаточно для звонков и общения. Если же помимо звонков необходимо пользоваться Интернет, то в устройстве должны присутствовать технологии передачи данных 3G, 4G, а в скором времени и 5G, с более высокой скоростью передачи данных соответственно."
+                                    scope="row">Стандарт мобильной сети
+                                </th>
+                                <td class="col data" data-th="Стандарт мобильной сети ">4G (LTE), 3G </td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Количество SIM-карт </th>
+                                <td class="col data" data-th="Количество SIM-карт">1 SIM </td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Диагональ экрана </th>
+                                <td class="col data" data-th="Диагональ экрана">4.7"</td>
+                            </tr>
+                            <tr>
+                                <th class="col label"
+                                    data-description="Отвечает за яркость, контрастность и насыщенность цветов дисплея."
+                                    scope="row">Технология экрана
+                                </th>
+                                <td class="col data" data-th="Технология экрана">IPS</td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Производитель процессора </th>
+                                <td class="col data" data-th="Производитель процессора">Apple</td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Модель центрального процессора
+                                </th>
+                                <td class="col data" data-th="Модель центрального процессора">A13 Bionic </td>
+                            </tr>
+                            <tr>
+                                <th class="col label"
+                                    data-description="Ядра процессора берут на себя все задачи и процессы, происходящие на вашем гаджете. При наличии нескольких наборов с ядрами (например, 2+2) они распределяют между собой различные задачи в зависимости от их типа и сложности, не тратя энергию на использование всех ядер процессора. Большее количество ядер обеспечивают быстрое решение поставленных задач, при этом потребляя больше энергии."
+                                    scope="row">Количество ядер процессора
+                                </th>
+                                <td class="col data" data-th="Количество ядер процессора">6</td>
+                            </tr>
+                            <tr>
+                                <th class="col label"
+                                    data-description="Отвечает за хранение системных файлов, предустановленных производителем приложений, и их данных. Также – за хранение больших данных (музыка, фото, видео). Внутреннюю память можно расширить с помощью MicroSD, если это предусмотрено производителем."
+                                    scope="row">Внутренняя память
+                                </th>
+                                <td class="col data" data-th="Внутренняя память">128 GB</td>
+                            </tr>
+                            <tr>
+                                <th class="col label"
+                                    data-description="Предназначена для временной загрузки запущенных приложений. При запуске приложения память заполнится, а при его закрытии — очистится. Так, при небольшом объеме оперативной памяти и, например, запуске 2 «тяжелых» игр, памяти может не хватить, и ваш гаджет будет подтормаживать пока приложения не закроются."
+                                    scope="row">Оперативная память
+                                </th>
+                                <td class="col data" data-th="Оперативная память">3 GB</td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Максимальный объем карты памяти
+                                </th>
+                                <td class="col data" data-th="Максимальный объем карты памяти">
+                                    Не поддерживается </td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Основная камера </th>
+                                <td class="col data" data-th="Основная камера">12 Мп</td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Вспомогательные камеры </th>
+                                <td class="col data" data-th="Вспомогательные камеры">Нет</td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Фронтальная камера </th>
+                                <td class="col data" data-th="Фронтальная камера"> 7 Мп </td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Особенности корпуса </th>
+                                <td class="col data" data-th="Особенности корпуса"> Пыле- и влагозащита, Корпус из
+                                    алюминия </td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Емкость аккумулятора, мА·ч </th>
+                                <td class="col data" data-th="Емкость аккумулятора, мА·ч"> 1821</td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Операционная система </th>
+                                <td class="col data" data-th="Операционная система"> iOS </td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Функция eSIM </th>
+                                <td class="col data" data-th="Функция eSIM"> Есть </td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Основной интрерфейс </th>
+                                <td class="col data" data-th="Основной интрерфейс">
+                                    Lightning </td>
+                            </tr>
+                            <tr>
+                                <th class="col label"
+                                    data-description="3,5 мм mini-Jack позволит подключить к планшету проводные наушники. Комбинированный — либо наушники, либо микрофон."
+                                    scope="row">Аудиоразъем
+                                </th>
+                                <td class="col data" data-th="Аудиоразъем"> Lightning </td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Бренд </th>
+                                <td class="col data" data-th="Бренд"> Apple </td>
+                            </tr>
+                            <tr>
+                                <th class="col label" data-description="" scope="row">Цвет </th>
+                                <td class="col data" data-th="Цвет"> Черный </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- ****** -->
+
+                </div>
+                <div class="vd-table-show-more">
+                    <button class="vd-show-more" id="show-more-btn">
+                        <span>Смотреть характеристики</span>
+                    </button>
+                </div>
+                <script>
+                    document.getElementById('show-more-btn').onclick = function () {
+                        document.getElementById('vd-table-info').classList.remove("vd-table-hide");
+                        this.style.display = 'none';
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="vd-section vd-s-6">
+            <div class="vd-container  vd-column-info">
+                <div class="column-info">
+                    <div class="column-info-head">
+                        <div class="column-info-head-logo"><img src="./images/column-logo-1.svg" alt=""></div>
+                        <div class="column-info-head-title">Вигода <br /> 3000 грн</div>
+                    </div>
+                    <div class="column-info-body">
+                        Що може бути краще за новий смартфон? Тільки новий смартфон зі знижками! Ловіть фіксовану знижку
+                        3000 грн на крутезний смартфон iPhone SE 2020. Знижка надається за умови підключення контракту
+                    </div>
+                </div>
+                <div class="column-info">
+                    <div class="column-info-head">
+                        <div class="column-info-head-logo">
+                            <div class="column-info-head-logo"><img src="./images/column-logo-2.svg" alt=""></div>
+                        </div>
+                        <div class="column-info-head-title">Спілкування <br /> без меж</div>
+                    </div>
+                    <div class="column-info-body">
+                        Отримуй максимум від тарифного плану та будь на зв'язку завжди! Підключай Vodafone Red XL на
+                        контрактній основі та насолоджуйся перевагами: <br> · Безліміт у мережі Vodafone Україна <br> ·
+                        Безлімітний 4G/3G інтернет <br> · 350 хвилин на інші мережі <br> · 100 хв за кордон <br> · 350
+                        SMS по Україні та за кордон
+
+                    </div>
+                </div>
+                <div class="column-info">
+                    <div class="column-info-head">
+                        <div class="column-info-head-logo">
+                            <div class="column-info-head-logo"><img src="./images/column-logo-3.svg" alt=""></div>
+                        </div>
+                        <div class="column-info-head-title">"СмартОк"-захист смартфону на рік! </div>
+                    </div>
+                    <div class="column-info-body">
+                        Захисти смартфон — користуйся ним на повну! </strong><strong></strong><br>Як часто у Вас падав
+                        смартфон? Або Ви випадково проливали на нього ранкову каву? Саме для того, щоб Ви могли
+                        користуватися своїм новеньким смартфоном на повну, забезпечте захист свого смартфону зі
+                        страховим продуктом «СмартОк». Вам потрібно лише оформити страховку і насолоджуватися усіма
+                        перевагами безпечного користування!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vd-section vd-s-7">
+            <div class="vd-container vd-cart-item">
+                  <div class="vd-cart-item-img"><img src="./images/vd-item-img.png" alt="iphone-se"></div>
+                  <div class="vd-cart-item-price"><img src="./images/vd-item-price.svg" alt="iphone-se"></div>
+                  <div class="vd-cart-item-btn">
+                      <a href="#" class="vodafone-btn red">Купить</a>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

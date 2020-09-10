@@ -25,10 +25,14 @@
             crossorigin="anonymous"></script>
     <script src="./lib/own/owl.carousel.min.js"></script>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
 </head>
 <body>
 <div class="container">
-    <div class="items owl-theme owl-carousel animate__slideOutUp" id="items">
+    <div class="items " id="items">
+        <div class="marker timeline-trigger"></div>
         <div class="item l1">1</div>
         <div class="item l2">2</div>
         <div class="item l3">3</div>
@@ -39,7 +43,9 @@
         <div class="item l3">8</div>
         <div class="item l1">9</div>
         <div class="item l2">1</div>
-        <div class="item l3">2</div>
+        <div class="marker start-trigger"></div>
+<div class="marker end-trigger"></div>
+        <div class="item l3 box">2</div>
         <div class="item l1">3</div>
         <div class="item l2">4</div>
         <div class="item l3">5</div>
@@ -65,13 +71,15 @@
         <div class="item l2">7</div>
         <div class="item l3">8</div>
         <div class="item l1">9</div>
+<div class="marker end-trigger"></div>
     </div>
 </div>
 
 
 <style type="text/css">
     .item{
-        height: 500px;
+        height: 100px;
+        width: 100px;
         border: black 1px solid;
     }
     .item.l1{
@@ -83,35 +91,86 @@
     .item.l3 {
         background: cadetblue;
     }
+    .item.l1 {
+        width: 50px;
+        height: 50px;
+    }
 
+    .box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: absolute;
+}
+
+.marker {
+  width: 100%;
+  left: 0;
+  pointer-events: none;
+  user-select: none;
+  z-index: 100;
+}
+
+.timeline-trigger {
+  position: fixed;
+  border: 1px solid blue;
+  z-index: 90;
+}
+
+.start-trigger {
+  border: 1px solid green;
+  position: absolute;
+}
+
+.end-trigger {
+  border: 1px solid red;
+  position: absolute;
+}
 </style>
 <script>
-    var options = {
-        nav:true,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 1000,
-        smartSpeed: 1000,
-        mouseDrag: true,
-        touchDrag: true,
-        autoWidth: false,
-        animateOut: 'slideOutDown',
-        animateIn: 'flipInX',
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    }
-    console.log($('#items'))
-    $('#items').owlCarousel(options);
-    console.log('hello')
+var triggerOffset = document.documentElement.clientHeight / 2;
+var sceneStart = 2000;
+var duration = 300;
+
+var requestId = null;
+
+gsap.set(".box", {
+  left: 0,
+  top: 2100
+});
+
+gsap.set(".timeline-trigger", {
+  top: triggerOffset
+});
+
+gsap.set(".start-trigger", {
+  top: sceneStart
+});
+
+gsap.set(".end-trigger", {
+  top: sceneStart + duration
+});
+
+// "SCROLL MAGIC"!!!
+var tl = gsap.timeline({ paused: true })
+  .set(".box", { backgroundColor: "#64dd17" ,opacity:0 }, sceneStart)
+  .to(".box", { duration: duration, rotation: 0, x: 0 ,scale: 0.5 , opacity:1}, sceneStart)
+  .set(".box", { backgroundColor: "red" })
+  
+// Only update on animation frames
+window.addEventListener("scroll", function() {
+  if (!requestId) {
+    requestId = requestAnimationFrame(update);
+  }
+});
+
+update();
+
+// Set timeline time to scrollTop
+function update() {
+  tl.time(window.pageYOffset + triggerOffset);
+  requestId = null;
+}
 
 </script>
 </body>

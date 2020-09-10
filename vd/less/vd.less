@@ -1,0 +1,434 @@
+@vd-red: #e60000;
+@vd-bg-img: "../images/vd-bg.svg";
+@vd-logo-img: "../images/vd-bg.svg";
+@vd-hand-img: "../images/vd-hand.svg";
+@vd-bg-img-l: "../images/vd-bg-left.svg";
+@vd-arrow:'../images/arrow-anim.svg';
+
+.vd-s-1 {
+  font-family: "Gtwalsheim", Arial, sans-serif;
+  color: white;
+  padding-top: 140px;
+}
+
+.s-main-head {
+  font-size: 34px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.s-main-text {
+  font-size: 29px;
+  line-height: 1.55;
+  font-weight: 300;
+}
+.vd-s-1 {
+  background-color: @vd-red;
+  width: 100%;
+  height: 800px;
+  .vd-s-main {
+    padding-top: 40px;
+    position: relative;
+  }
+  .vd-logo,
+  .s-main-head,
+  .s-main-text,
+  .cirlce-block {
+    margin-left: 73px;
+  }
+  .vd-logo {
+    margin-bottom: 25px;
+  }
+}
+.vd-s-2 {
+  background-color: @vd-red;
+  width: 100%;
+  height: 800px;
+  font-family: "Gtwalsheim", Arial, sans-serif;
+  color: white;
+  .vd-s-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .s-main-head {
+    width: 420px;
+    font-size: 32px;
+    line-height: 1.55;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .s-main-text {
+    width: 420px;
+    font-size: 20px;
+    line-height: 1.55;
+    font-weight: 400;
+  }
+  .vd-logo-2 {
+    width: 420px;
+    margin-bottom: 20px;
+    .vd-logo-img {
+      width: auto;
+      display: block;
+      height: 60px;
+    }
+  }
+}
+.vd-s-3 {
+  background-color: @vd-red;
+  width: 100%;
+  height: 800px;
+  font-family: "Gtwalsheim", Arial, sans-serif;
+  color: white;
+  .vd-s-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .s-main-head {
+    width: 420px;
+    font-size: 32px;
+    line-height: 1.55;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-family: "Gtwalsheim", Arial, sans-serif;
+  }
+  .s-main-text {
+    width: 420px;
+    font-size: 20px;
+    line-height: 1.55;
+    font-weight: 400;
+  }
+  .vd-logo-3 {
+    width: 420px;
+    margin-bottom: 20px;
+    height: 80px;
+    .vd-logo-img {
+      width: auto;
+    }
+  }
+  .vd-s-media-img {
+    height: 80vh;
+  }
+}
+.vd-s-4 {
+  background-color: @vd-red;
+  width: 100%;
+  height: 800px;
+  font-family: "Gtwalsheim", Arial, sans-serif;
+  color: white;
+  .vd-s-media-img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 30px;
+  }
+  .s-main-head {
+    width: 560px;
+    font-size: 32px;
+    line-height: 1.55;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-family: "Gtwalsheim", Arial, sans-serif;
+    text-align: center;
+  }
+  .s-main-text {
+    width: 560px;
+    font-size: 20px;
+    line-height: 1.55;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+.vd-bg-img {
+  background-image: url(@vd-bg-img);
+}
+.vd-bg-img-l {
+  background-image: url(@vd-bg-img-l);
+}
+.vd-container {
+  max-width:1440px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 0 auto;
+}
+.vd-s-media {
+  // outline: 1px solid white;
+  flex-basis: 50%;
+}
+.vd-s-main {
+  // outline: 1px solid white;
+  flex-basis: 50%;
+}
+.vd-mg {
+  padding-top: 200px;
+}
+.cirlce-block {
+  height: 220px;
+  margin-top: 16px;
+}
+
+.vd-cirlce {
+  background-color: #9c2aa0;
+  border-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__big {
+    width: 161px;
+    height: 161px;
+    align-self: flex-start;
+  }
+  &__small {
+    width: 137px;
+    height: 138px;
+    align-self: flex-end;
+  }
+}
+.circle-price {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.circle-price_old {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+
+  &:before {
+    content: "";
+    border-top: solid #fff 1px;
+    display: block;
+    position: relative;
+    top: 50%;
+  }
+}
+.circle-price_new {
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 600;
+}
+.circle-price_cur {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 600;
+}
+.vd-logo-hand {
+  width: 60px;
+  height: 40px;
+  background-image: url(@vd-hand-img);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.circle-contract {
+  color: #fff;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  font-weight: 500;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+}
+.vd-s-media-img {
+  text-align: center;
+  height: 650px;
+  img {
+    height: 100%;
+  }
+}
+@keyframes jump {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.vd-arrow {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+}
+.arrow-animation {
+  animation: jump 2s infinite linear;
+  backface-visibility: hidden;
+  position: relative;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 40px;
+    background-image: url(@vd-arrow);
+    background-repeat: no-repeat;
+  }
+}
+
+.vd-section {
+  .vd-logo {
+    width: 210px;
+    height: 51px;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.vd-table-show-more {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  .vd-show-more {
+    border: solid black 1px;
+    width: 300px;
+    height: 50px;
+    font-family: "Vodafone Lt", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    background-color: inherit;
+    cursor: pointer;
+  }
+}
+.vd-table-title {
+  display: block;
+  margin: 30px 0;
+  font-family: "Vodafone Rg", sans-serif;
+  line-height: normal;
+  font-size: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.vd-table-body {
+  &.vd-table-hide {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 42.1%,
+        rgba(255, 255, 255, 0.9) 77.08%,
+        #ffffff 91.86%
+      );
+    }
+  }
+  table {
+    width: 800px;
+    margin: 0 auto;
+    tr th,
+    tr td {
+      padding: 20px 5px 20px 20px;
+      font-family: "Vodafone Rg", sans-serif;
+      line-height: 21px;
+      font-size: 16px;
+      color: #333;
+      font-weight: 400;
+      width: 360px;
+      text-align: left;
+    }
+    tr:nth-child(even) {
+      background-color: #f4f4f4;
+    }
+  }
+}
+.vd-s-6 {
+  background-color: @vd-red;
+  padding-top: 125px;
+  padding-bottom: 125px;
+  font-family: "Gtwalsheim", Arial, sans-serif;
+  color: white;
+  .vd-column-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .column-info {
+    flex-basis: 26%;
+  }
+  .column-info-head {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .column-info-head-logo {
+      width: 75px;
+      height: 75px;
+      margin-right: 10px;
+      img {
+        width: 100%;
+      }
+  }
+  .column-info-head-title {
+    color: #ffffff;
+    font-size: 26px;
+    font-family: 'Gtwalsheim',Arial,sans-serif;
+    line-height: 1.55;
+    font-weight: 500;
+  }
+  .column-info-body {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Gtwalsheim',Arial,sans-serif;
+    line-height: 1.65;
+    font-weight: 400;
+  }
+
+}
+.vd-s-7 {
+.vd-cart-item {
+  display:flex ; 
+  justify-content: space-between;
+
+}
+.vd-cart-item-img {
+  width: 270px ; 
+  height: 100px;
+  img {
+    height: 100%;
+  }
+}
+.vd-cart-item-price ,.vd-cart-item-btn {
+  display: flex;
+  align-items: center;
+}
+.vd-cart-item-btn {
+  .vodafone-btn {
+    background-color: #e60000;
+    text-decoration: none;
+      width: 280px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Vodafone Rg",sans-serif;
+      font-size: 18px;
+      color: #fff;
+      font-weight: 400;
+  }
+}
+}
+
+
+
+// variablea
+.ds {
+  &-f {
+    display: flex;
+  }
+  &-f-c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

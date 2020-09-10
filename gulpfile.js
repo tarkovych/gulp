@@ -5,6 +5,8 @@ var sass = require("gulp-sass");
 var watch = require("gulp-watch");
 var cssmin = require("gulp-cssmin");
 var autoprefixer = require("gulp-autoprefixer");
+var livereload = require('gulp-livereload');
+var connect = require('gulp-connect');
 // function css(done){
 //   gulp.src("./less/*.less")
 //   .pipe(less({
@@ -74,7 +76,48 @@ class Gulp {
 }
 
 
+function vd(done) {
+    console.log('test');
+    gulp
+        .src('./vd/less/*')
+        .pipe(
+            less({
+                errLogToConsole: true,
+                outputStyle: "compressed",
+            })
+        )
+        .on("error", console.error.bind(console))
+        .pipe(
+            autoprefixer({
+                overrideBrowserslist: ["last 2 versions"],
+                cascade: false,
+            })
+        )
+        .pipe(gulp.dest("./vd/css"));
+    gulp
+        .src('./vd/less/*')
+        .pipe(
+            autoprefixer({
+                overrideBrowserslist: ["last 2 versions"],
+                cascade: false,
+            })
+        )
+        .pipe(gulp.dest("./vd/css"))
+        .pipe(connect.reload());
+    done();
+}
 
+
+gulp.task('connect', function() {
+    connect.server({
+        livereload: true
+    });
+});
+function wvd () {
+    gulp.watch("./vd/less/*",vd);
+}
+gulp.task(vd);
+gulp.task(wvd);
 //////////////////////////////
 let new_modal = new Gulp(
   "/Users/mac/Desktop/gulp/aqua/modal.less",
@@ -106,6 +149,11 @@ wcart = () => new_cart.watch(cart);
 
  gulp.task(cart);
  gulp.task(wcart);
+
+
+
+
+
 
 
 
